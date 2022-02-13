@@ -1,9 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-worl-service
+  name: hello-service
+  labels:
+    run: hello-world
 spec:
+  type: NodePort
   ports:
-  - port: 6379
+  - port: 80
+    protocol: TCP
   selector:
-    app: hello-world
+    run: hello-world
