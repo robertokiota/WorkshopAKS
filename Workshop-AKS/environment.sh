@@ -100,6 +100,7 @@ az aks create \
 --service-cidr 10.2.0.0/24 \
 --attach-acr $aksacr   \
 --enable-managed-identity \
---generate-ssh-keys   
+--generate-ssh-keys \
+--yes  
 
 
